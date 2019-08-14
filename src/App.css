@@ -1,33 +1,56 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eff3f7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html,
+body,
+#root,
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    /* 수평방향 정렬 */
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movies {
+    display: flex;
+
+    align-items: flex-start;
+    /* 수평방향 정렬 : 요소들 사이에만 공간을 두고 배치 */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px;
+    padding-top: 70px;
+    width: 90%;
+}
+
+.movies .movie {
+    width: 47%;
+    background-color: white;
+    margin-bottom: 70px;
+    display: flex;
+    align-items : flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px; 
+    position: relative;
+    color: #adaeb9;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+        0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
